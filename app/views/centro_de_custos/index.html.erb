@@ -1,0 +1,25 @@
+<h1>Listando Centro de Custos</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Tipo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @centro_de_custos.each do |centro_de_custo| %>
+  <tr>
+    <td><%= centro_de_custo.nome %></td>
+    <td><%= centro_de_custo.tipo %></td>
+    <td><%= link_to 'Mostrar', centro_de_custo %></td>
+    <td><%= link_to 'Editar', edit_centro_de_custo_path(centro_de_custo) %></td>
+    <td><%= link_to 'Excluir', centro_de_custo, confirm: 'Você confirma?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Novo Centro de custo', new_centro_de_custo_path %>
