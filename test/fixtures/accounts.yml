@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  desciption: MyString
+  type: 
+  initialbalance: 9.99
+  status: MyString
+
+two:
+  desciption: MyString
+  type: 
+  initialbalance: 9.99
+  status: MyString
