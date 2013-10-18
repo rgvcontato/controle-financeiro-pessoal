@@ -3,18 +3,37 @@
 <head>
   <title>ControleFinanceiro</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<header class="container">
-		<h1 class="logo">twentycents</h1>
-	</header>
-	<section class="container">
-		<%= yield %>
+	<input type="checkbox" class="toggle-menu" id="main-toggle-menu" onclick="null" />	
+	<nav class="main toggleable-slide-menu dark-blue-menu">
+		<ul>
+			<li>
+				<a href="<%= root_path %>">Home</a>
+			</li>
+			<li>
+				<a href="<%= centro_de_custos_path %>">Centro de Custos</a>
+			</li>
+			<li>
+				<a href="<%= lancamentos_path %>">Lançamento</a>
+			</li>
+		</ul>
+	</nav>
+	<section class="wrapper">
+		<header class="container">
+			<h1 class="logo">twentycents</h1>
+			<label for="main-toggle-menu" class="toggle-label" href="#">Toggle menu</label>
+		</header>
+		<section class="container">
+			<section id="#content">
+				<%= yield %>
+			</section>
+		</section>
+		<footer class="container">
+			
+		</footer>
 	</section>
-	<footer class="container">
-		
-	</footer>
+	<%= javascript_include_tag "application" %>
 </body>
 </html>
