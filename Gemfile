@@ -11,6 +11,8 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+gem 'rails_12factor', group: :production
+
 group  :test do
   gem 'rspec', '2.14.1'
 end
