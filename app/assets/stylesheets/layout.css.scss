@@ -58,7 +58,8 @@ html , body {
     z-index: 1;
     overflow: auto;
     opacity: 0;
-    -webkit-transition: opacity 0s $transitionSpeed    
+    -webkit-transition: opacity 0s $transitionSpeed;
+    transition: opacity 0s $transitionSpeed 
 }
 
 .toggle-menu {
@@ -69,12 +70,12 @@ html , body {
             opacity: 1;
             -webkit-transition: opacity 0s 0s;
             -moz-transition: opacity 0s 0s;
+	    transition: opacity 0s 0s
         }
     
         & ~ .wrapper  {
             -webkit-transform: translate3D($menuOffset,0,0);
             -moz-transform: translate3D($menuOffset,0,0);
-    
             #content {
                 overflow: hidden;
             }
@@ -111,6 +112,7 @@ section.wrapper {
 // END Toggleable menu
 .dark-blue-menu {
     background: #333;
+    box-shadow: inset -10px 0 6px -6px #121212;
     ul {
         display: block;
         height: 100%;
