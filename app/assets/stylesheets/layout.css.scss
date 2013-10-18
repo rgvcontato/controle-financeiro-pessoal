@@ -2,6 +2,7 @@ $main_color: #323E4E;
 $layout_bg: #E8E8E8;
 $transitionSpeed: .5s;
 $menuOffset: 80%;
+$active:#336c95;
 
 body {
 	font-family:" Helvetica", sans-serif;
@@ -15,11 +16,27 @@ header.container {
 	border-bottom:1px solid #E6E6E6;
 	background-color:#FFF;
 	padding:0.8em 0.4em;
-	border-shadow:1px #CCC
+	border-shadow:1px #CCC;
+	position:relative
 }
 .logo {
 	background:transparent image_url("logo.png") no-repeat left top;
-	text-indent:-9999%
+	text-indent:-9999%;
+	width:108px;
+	height:16px;
+	margin-top:0.5em;
+	right:0.4em;
+	position:absolute
+}
+.main-toggle-menu {
+	font-family: 'icomoon';
+	content: "/e600";
+	color:#333;
+	font-size: 2em;
+	cursor:pointer
+}
+.main-toggle-menu:hover {
+	color:$active
 }
 
 // Toggleable menu
@@ -41,8 +58,7 @@ html , body {
     z-index: 1;
     overflow: auto;
     opacity: 0;
-    -webkit-transition: opacity 0s $transitionSpeed;
-    
+    -webkit-transition: opacity 0s $transitionSpeed    
 }
 
 .toggle-menu {
@@ -114,7 +130,7 @@ section.wrapper {
             background: -moz-linear-gradient(rgba(255,255,255,.02) 0%, rgba(0,0,0,.1) 100%);
     
             &.active {
-                background-color: #336c95;
+                background-color: $active;
             }
         }
     }
