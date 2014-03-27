@@ -14,5 +14,5 @@ production:
   database: controle_financeiro_production
   pool: 5
   username: postgres
-  password: postgresq1
+  password: 1234
   host: localhost
